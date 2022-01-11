@@ -2,7 +2,7 @@ requests
 numpy
 pandas
 scipy
-python3-statsmodels
+statsmodels
 patsy
 scikit-learn
 tqdm>=4.10.0
