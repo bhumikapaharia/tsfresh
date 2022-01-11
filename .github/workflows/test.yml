@@ -105,6 +105,5 @@ jobs:
               pip install numpy pandas scikit-learn dask[dataframe] distributed scipy requests patsy tqdm matrixprofile stumpy cloudpickle Sphinx docutils b2luigi sphinx_rtd_theme && \
               apt-get -y install python3-numpy python3-statsmodels python3-psutil && \
               pip install -r test-requirements.txt && \
-              pip install . && \
               pytest --junitxml=junit/test-results-3.8-highest.xml --cov-report=xml tests && \
               deactivate'
