@@ -104,7 +104,7 @@ jobs:
               python -m pip install --upgrade pip wheel setuptools && \
               pip install numpy pandas scikit-learn dask distributed scipy && \
               apt-get -y install python3-numpy python3-statsmodels python3-psutil && \
-              pip install -r requirements.txt -r test-requirements.txt && \
+              pip install -r rdocs-requirements.txt -r requirements.txt -r test-requirements.txt && \
               pip install . && \
               pytest --junitxml=junit/test-results-3.8-highest.xml --cov-report=xml tests && \
               deactivate'
