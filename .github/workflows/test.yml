@@ -101,7 +101,7 @@ jobs:
               python3 -m pip install virtualenv && python3 -m venv py38-venv && \
               source py38-venv/bin/activate && \
               python -m pip install --upgrade pip wheel setuptools && \
-              pip install numpy pandas scikit-learn statsmodels dask distributed scipy && \
+              pip install numpy pandas scikit-learn dask distributed scipy && \
               pip install -r requirements.txt -r test-requirements.txt && \
               pip install . && \
               pytest --junitxml=junit/test-results3.8.xml --cov-report=xml tests && \
