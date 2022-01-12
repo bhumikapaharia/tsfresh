@@ -102,8 +102,9 @@ jobs:
               source py38-venv/bin/activate && \
               ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && export DEBIAN_FRONTEND=noninteractive && apt-get install -y tzdata && dpkg-reconfigure --frontend noninteractive tzdata && \
               python -m pip install --upgrade pip wheel setuptools && \
-              pip install numpy pandas scikit-learn dask[dataframe] distributed scipy requests patsy tqdm matrixprofile stumpy cloudpickle Sphinx docutils b2luigi sphinx_rtd_theme && \
-              apt-get -y install python3-numpy python3-statsmodels python3-psutil && \
+              pip install -U numpy && \
+              pip install pandas scikit-learn dask[dataframe] distributed scipy requests patsy tqdm matrixprofile stumpy cloudpickle Sphinx docutils b2luigi sphinx_rtd_theme && \
+              apt-get -y install python3-statsmodels python3-psutil && \
               pip install -r test-requirements.txt && \
               pytest --junitxml=junit/test-results-3.8-highest.xml --cov-report=xml tests && \
               deactivate'
